@@ -6,7 +6,7 @@
         <input :type="type" :id="id" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)"
             :placeholder="placeholder" class="block w-full rounded-md border-0 py-2.5 px-3 text-gray-900 shadow-sm
              ring-1 ring-inset ring-gray-300 placeholder:text-gray-400
-             focus:ring-10 focus:ring-inset focus:ring-[#103D92] sm:text-sm sm:leading-6" />
+             focus:ring-10 focus:ring-inset focus:ring-[#103D92] sm:text-sm sm:leading-6" /> 
     </div>
 </template>
 

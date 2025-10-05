@@ -46,7 +46,7 @@
                             </p>
                         </div>
                     </div>
-                    <!-- Кнопка -->
+
                     <div class="flex justify-end mt-8">
                         <BaseButton type="submit">
                             Отправить заявку
@@ -70,7 +70,7 @@ const isSubmitted = ref(false)
 const ttlOptions = [
     { value: '3h', label: '3 часа (по умолчанию)' },
     { value: '1d', label: '1 день' },
-    { value: 'permanent', label: 'Постоянно (требует допополнительное обоснования)' }
+    { value: 'permanent', label: 'Постоянно' }
 ]
 
 const formData = ref({

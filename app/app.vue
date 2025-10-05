@@ -1,9 +1,16 @@
 <template>
-  <div class="p-10">
-    <h1 class="text-3xl">Мои секреты</h1>
-    <BaseButton @click="isModalOpen = true" class="mt-4">
-      Создать новую заявку
-    </BaseButton>
+  <div class="flex h-screen bg-gray-50">
+    <AppSidebar />
+
+    <div class="flex-1 flex flex-col overflow-hidden">
+
+      <NuxtPage 
+        :search-query="searchQuery" 
+        :is-modal-open="isModalOpen"
+        @update:search-query="searchQuery = $event"
+        @update:is-modal-open="isModalOpen = $event"
+      />
+    </div>
 
     <NewRequestModal
       v-if="isModalOpen"
@@ -13,6 +20,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 
-const isModalOpen = ref(false)
+const searchQuery = ref('');
+const isModalOpen = ref(false);
 </script>
